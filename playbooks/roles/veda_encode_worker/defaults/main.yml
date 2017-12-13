@@ -29,7 +29,7 @@ veda_encode_worker_environment:
   VEDA_ENCODE_WORKER_CFG: '{{ COMMON_CFG_DIR }}/{{ veda_encode_worker_service_name }}.yml'
 
 VEDA_ENCODE_WORKER_GIT_IDENTITY: !!null
-VEDA_ENCODE_WORKER_VERSION: 'master'
+VEDA_ENCODE_WORKER_VERSION: 'ammar/changes-for-ansible-role'
 
 VEDA_ENCODE_WORKER_REPOS:
   - PROTOCOL: '{{ COMMON_GIT_PROTOCOL }}'
