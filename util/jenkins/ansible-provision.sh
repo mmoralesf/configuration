@@ -359,8 +359,10 @@ EOF
 fi
 
 veda_web_frontend="true"
+veda_pipeline_worker="false"
+veda_encode_worker="true"
 declare -A deploy
-roles="edxapp forum ecommerce credentials discovery veda_web_frontend notifier xqueue xserver certs demo testcourses"
+roles="edxapp forum ecommerce credentials discovery veda_web_frontend veda_pipeline_worker veda_encode_worker notifier xqueue xserver certs demo testcourses"
 
 for role in $roles; do
     deploy[$role]=${!role}
