@@ -21,16 +21,12 @@
     - install
     - install:app-requirements
 
-# TODO! Update ENCODE_WORKDIR directory path with a better path
-# https://openedx.atlassian.net/browse/EDUCATOR-????
 - name: create worker ENCODE_WORKDIR directory
   file:
-    path: "{{ veda_encode_worker_home }}/{{ item }}"
+    path: "{{ veda_encode_worker_data_dir }}"
     state: directory
     owner: "{{ veda_encode_worker_service_name }}"
     group: "{{ common_web_group }}"
-  with_items:
-    - "ENCODE_WORKDIR"
   tags:
     - install
     - install:base
