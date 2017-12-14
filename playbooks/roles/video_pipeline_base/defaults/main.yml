@@ -15,8 +15,6 @@ video_pipeline_base_service_name: "video_pipeline_base"
 
 video_pipeline_base_val_base_url: "{{ VIDEO_PIPELINE_BASE_LMS_BASE_URL | default('http://127.0.0.1:8000') }}"
 
-video_pipeline_base_work_dir: !!null
-
 VIDEO_PIPELINE_BASE_GUNICORN_PORT: 8555
 VIDEO_PIPELINE_BASE_NGINX_PORT: "1{{ VIDEO_PIPELINE_BASE_GUNICORN_PORT }}"
 VIDEO_PIPELINE_BASE_SSL_NGINX_PORT: "4{{ VIDEO_PIPELINE_BASE_GUNICORN_PORT }}"

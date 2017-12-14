@@ -21,12 +21,13 @@
     - install
     - install:app-requirements
 
-- name: create worker ENCODE_WORKDIR directory
+- name: create worker work directories
   file:
-    path: "{{ veda_encode_worker_data_dir }}"
+    path: "{{ item.value }}"
     state: directory
     owner: "{{ veda_encode_worker_service_name }}"
     group: "{{ common_web_group }}"
+  with_dict: "{{ veda_encode_worker_directories }}"
   tags:
     - install
     - install:base

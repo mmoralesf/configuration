@@ -19,6 +19,12 @@ veda_encode_worker_venv_bin: '{{ veda_encode_worker_home }}/venvs/{{ veda_encode
 veda_encode_worker_data_dir: '{{ COMMON_DATA_DIR }}/{{ veda_encode_worker_service_name }}/ENCODE_WORKDIR'
 veda_encode_worker_service_config: !!null
 
+veda_encode_worker_directories:
+  ENCODE_WORK_DIR: '{{ veda_encode_worker_data_dir }}'
+
+veda_encode_worker_config_other: {}
+veda_encode_worker_config_extra: '{{ veda_encode_worker_config_other | combine(veda_encode_worker_directories) }}'
+
 veda_encode_worker_requirements_base: '{{ veda_encode_worker_code_dir }}'
 veda_encode_worker_requirements:
   - requirements.txt

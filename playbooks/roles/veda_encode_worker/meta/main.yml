@@ -16,7 +16,7 @@ dependencies:
   - veda_ffmpeg
   - role: video_pipeline_base
     video_pipeline_base_service_name: '{{ veda_encode_worker_service_name }}'
-    video_pipeline_base_work_dir: '{{ veda_encode_worker_data_dir }}'
+    video_pipeline_base_config_extra: '{{ veda_pipeline_worker_config_extra }}'
   - role: edx_service
     edx_service_name: "{{ veda_encode_worker_service_name }}"
     edx_service_config: "{{ veda_encode_worker_service_config }}"
